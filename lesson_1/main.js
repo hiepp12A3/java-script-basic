@@ -1,25 +1,29 @@
 //  Khái niệm hàm (funtion)
+// Tham số trong hàm - Javascript cơ bản
 
 /**
- 1. Hàm?
-    - Là một khối mã
-    - Làm 1 việc cụ thể
+ 1. Tham số 
+    - Định nghĩa : là 1 giá trị truyền vào khi gọi tới 1 function
+    - Kiểu dữ liệu? : 
+    - Tính private?
+    - 1 tham số
+    - Nhiều tham số
 
-2. Loại hàm
-    - Built-in
-    - Tự định nghĩa
-
-3. Tính chất
-    - Không thực thi khi định nghĩa
-    - Sẽ thực thi khi được gọi
-    - Có thể nhận tham số
-    - Có thể trả về 1 giá trị
-
-4. Tạo hàm đầu tiên
+2. Truyền tham số 
+    - 1 tham số
+    - Nhiều tham số
+    
+3. Arguments 
+    - Đối tượng arguments?
+    - Giới thiệu vòng for
  */
 
-function showDialog() {
-    alert('Hi xin chao cac ban');
+function writeLog() {
+    var myString = '';
+    for (var param of arguments) {
+        myString += `${param} - `
+    }
+    console.log(myString);
 }
 
-showDialog();
+writeLog('LOG 1', 'LOG 2', 'LOG 3', 3, 4, 5);
