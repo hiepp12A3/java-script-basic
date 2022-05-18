@@ -1,37 +1,35 @@
 /**
- Một số điều cần biết về function
+    Các loại function
 
- 1. Khi function đặt trùng tên? : function định nghĩa sau sẽ ghi đề cái trước
- 2. Khai báo biến trong hàm? : phạm vi sử dụng của biến trong function thôi
- 3. Định nghĩa hàm trong hàm?
+    1. Declaration function - Chức năng khai báo
+    2. Expression function  - Chức năng biểu đạt
+    3. Arrow function       - 
  */
 
+showMessage(); // có thể gọi function trước khi được định nghĩa
 
-//  TH1:
-// function showMessage() {
-//     console.log('Message 1');
-// }
-
-// function showMessage() {
-//     console.log('Message 2');
-// }
-// showMessage(); 
-
-
-// TH2:
-// function showMessage() {
-//     var fullName = 'Thanh Hiep';
-//     console.log(fullName);
-// }
-// showMessage();
-
-
-// TH3:
+//Declaration function : phải đặt tên cho function
 function showMessage() {
-    function showMessage2() {
-        console.log('Message 2');
-    }
-    showMessage2();
+    console.log('Declaration funtion');
 }
 
-showMessage();
+
+// showMessage2(); // sẽ báo lỗi
+
+//Expression function : gán cho 1 biến, có thể đặt tên hc không đặt tên
+var showMessage2 = function() {
+    console.log('Expression funtion');
+}
+
+showMessage2(); // Expression chỉ có thể gọi được sau khi được định nghĩa
+
+//Expression function
+setTimeout(function autoLogin() {
+
+});
+//Expression function
+var myObject = {
+    myFunction: function() {
+
+    }
+}
