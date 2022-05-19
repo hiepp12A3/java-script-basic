@@ -34,9 +34,18 @@ var languages2 = new Array(
 );
 console.log(typeof languages);
 console.log(typeof languages2);
+
 // TRG HỢP ĐẶC BIỆT {} là obkect và [] là Array nên phải phân biệt
 console.log(typeof {}); // object
 console.log(typeof []); // object
 // vì cả 2 đều trả về object nên sử dụng hàm Array.
 console.log(Array.isArray({})); // true ; là 1 Array và ngược lại là false
 // - Kiêm tra data type
+
+//  2. Truy xuất mảng
+// kiểm tra độ dài mảng
+console.log(languages.length) //  8
+
+// kiểm tra theo index
+console.log(languages[0]) // javascript
+console.log(languages[2]) // Java
