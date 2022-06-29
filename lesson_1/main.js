@@ -1,6 +1,13 @@
-// Object Constructor
+/**
+    Object Prototype
 
-// tạo Constructor dùng chung cho các đối tượng
+    1.Prototype là gì?
+    2. Sử dụng khi nào?
+    Thêm được phương thức và thuộc tính bên ngoài hàm tạo
+    
+ */
+
+
 var User = function User(firstName, lastName, avatar) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -11,20 +18,19 @@ var User = function User(firstName, lastName, avatar) {
     }
 }
 
-// tạo 2 đối tượng dùng constructer vừa tạo
+// Thêm thuộc tính bên ngoài hàm tạo
+User.prototype.className = 'F8';
+// thêm phương thức bằng Prototype
+User.prototype.getClassName = function() {
+    return this.className;
+}
+
 var author = new User('Hiep', 'Thanh', 'dep trai sieu cap');
 var user = new User('Son', 'Ngong', 'dep trai sieu cap');
-
-// thêm thuộc tính cho hai đối tượng
-author.title = 'Chia se dao tai F8';
-user.comments = 'hi minh la Hiep dep trai';
-
-// gọi constructer từ đối tượng
-console.log(author.constructor);
 
 console.log(author);
 console.log(user);
 
-// gọi phương thức getName
-console.log(author.getName()); //  trả về Hiep & Thanh
-console.log(user.getName()); //  trả về Son & Ngong
+//  gọi thuộc tính tạo bằng prototype
+console.log(author.className);
+console.log(user.getClassName());
