@@ -1,38 +1,30 @@
-// Object trong JavaScript
+// Object Constructor
 
-var emailKey = 'email';
+// tạo Constructor dùng chung cho các đối tượng
+var User = function User(firstName, lastName, avatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
 
-var myInfo = {
-    name: 'Hiep Nguyen',
-    age: 18,
-    address: 'Ha Noi, VN',
-    [emailKey]: 'hiepdeptrai@gmail.com',
-    getName: function() {
-        return this.name;
+    this.getName = function() {
+        return `${this.firstName} & ${this.lastName}`;
     }
-};
+}
 
-// THÊm
-myInfo.email = 'hiep@gmail.com'; // cách 1 
-myInfo['my-email'] = 'hiepthanh@gmail.com'; // cách 2: thêm ký tự đặc biệt
+// tạo 2 đối tượng dùng constructer vừa tạo
+var author = new User('Hiep', 'Thanh', 'dep trai sieu cap');
+var user = new User('Son', 'Ngong', 'dep trai sieu cap');
 
-// lấy cả Object
-// console.log(myInfo);
-// lấy từng p.tử
-// console.log(myInfo.name);
-// lấy riêng  p.tử có ký tự đặc biệt
-// console.log(myInfo['my-email']);
-// k.có trả về undefined
-// console.log(myInfo['job']);
+// thêm thuộc tính cho hai đối tượng
+author.title = 'Chia se dao tai F8';
+user.comments = 'hi minh la Hiep dep trai';
 
-// XÓA
-delete myInfo.age;
-delete myInfo.address;
-console.log(myInfo);
+// gọi constructer từ đối tượng
+console.log(author.constructor);
 
-//  gọi function trong object
-console.log(myInfo.getName());
+console.log(author);
+console.log(user);
 
-// CÁCH GỌI
-// Function --> Phương thức / method
-// oTHERS --> Thuộc tính / Property
+// gọi phương thức getName
+console.log(author.getName()); //  trả về Hiep & Thanh
+console.log(user.getName()); //  trả về Son & Ngong
