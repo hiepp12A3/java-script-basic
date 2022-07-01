@@ -17,14 +17,46 @@
 
 /**
     Bài tập trên F8:
-    - Viết hàm getTotal trả về tổng giá trị các phần tử của mảng;
+    - Viết chg trình tỉnh tổng tiền đơn hàng
+    - cho trước mảng orders là danh sách các khóa học (thể hiện dưới dạng Object)
+        var orders = [
+            {
+                name: 'Khóa học HTML - CSS Pro',
+                price: 3000000
+            },
+            {
+                name: 'Khóa học Javascript Pro',
+                price: 2500000
+            },
+            {
+                name: 'Khóa học React Pro',
+                price: 3200000
+            }
+        ]
+    - Tạo hàm getTotal để tính tổng tiền
  */
 
-function getTotal(arr) {
-    let sum = 0;
-    for (i = 0; i < arr.length; i++) {
-        sum += arr[i]
+var orders = [{
+        name: 'Khóa học HTML - CSS Pro',
+        price: 3000000
+    },
+    {
+        name: 'Khóa học Javascript Pro',
+        price: 2500000
+    },
+    {
+        name: 'Khóa học React Pro',
+        price: 3200000
     }
-    return sum;
+]
+
+function getTotal(array) {
+    var total = 0;
+    var lengthAssay = array.length;
+    for (var i = 0; i < lengthAssay; i++) {
+        total += array[i].price;
+    }
+    return total;
 }
-console.log(getTotal([3, 5, 6]))
+// Expected results:
+console.log(getTotal(orders)) // Output: 8700000
