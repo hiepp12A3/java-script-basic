@@ -2,61 +2,55 @@
     Vòng lặp - Loop
 
     1. for - Lặp với điều kiện đúng
-    2. for/in - lặp vớ key của đối tượng
+    2. for/in - lặp với key của đối tượng
     3. for/or - lặp qua value của đối tượng
     4. while - Lặp khi điều kiện đúng
     5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
  */
 
 
-//  VÒNG LẶP FOR
-
-// for (var i = 1; i <= 10; i++) {
-//     console.log(i);
-// }
+//  FOR / in lopp
 
 /**
     Bài tập trên F8:
-    - Viết chg trình tỉnh tổng tiền đơn hàng
-    - cho trước mảng orders là danh sách các khóa học (thể hiện dưới dạng Object)
-        var orders = [
-            {
-                name: 'Khóa học HTML - CSS Pro',
-                price: 3000000
-            },
-            {
-                name: 'Khóa học Javascript Pro',
-                price: 2500000
-            },
-            {
-                name: 'Khóa học React Pro',
-                price: 3200000
-            }
-        ]
-    - Tạo hàm getTotal để tính tổng tiền
+  
  */
 
-var orders = [{
-        name: 'Khóa học HTML - CSS Pro',
-        price: 3000000
-    },
-    {
-        name: 'Khóa học Javascript Pro',
-        price: 2500000
-    },
-    {
-        name: 'Khóa học React Pro',
-        price: 3200000
-    }
-]
+var languages = [
+    'js',
+    'php',
+    'ruby',
+    'java'
+];
 
-function getTotal(array) {
-    var total = 0;
-    var lengthAssay = array.length;
-    for (var i = 0; i < lengthAssay; i++) {
-        total += array[i].price;
-    }
-    return total;
+var mystring = 'hiep dep trai';
+
+for (var key in languages) {
+    console.log(mystring[2]);
 }
+
+function run(object) {
+    var arr = [];
+    for (var key in object) {
+        arr.push(`Thuộc tính ${key} có giá trị ${object[key]}`)
+    }
+    return arr;
+}
+
 // Expected results:
-console.log(getTotal(orders)) // Output: 8700000
+console.log(
+    run({ name: 'Nguyen Van A', age: 16 }));
+
+// var myInfo = {
+//     name: 'Hiep dep trai',
+//     age: 17,
+//     address: 'Ha noi, VN'
+// }
+
+// for (var key in myInfo) {
+//     // lấy ra biến từ key
+//     console.log(myInfo);
+
+//     // lấy ra giá trị của biến từ key
+//     console.log(myInfo[key])
+// }
