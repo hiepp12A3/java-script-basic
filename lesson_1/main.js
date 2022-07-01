@@ -1,15 +1,29 @@
 /**
- * Câu lệnh rẽ nhánh - If else
+ * Câu lệnh rẽ nhánh - Wsitch
  */
 
-var date = 83248;
+var date = 39;
 
-if (date === 2) {
-    console.log('Hom nay la thu 2');
-} else if (date === 3) {
-    console.log('Hom nay la thu 3');
-} else if (date === 4) {
-    console.log('Hom nay la thu 4');
-} else {
-    console.log('khong biet')
+switch (date) {
+    case 2:
+        console.log('hom nay la thu 2');
+        break;
+    case 3:
+        console.log('hom nay la thu 3');
+        break;
+    case 4:
+        console.log('hom nay la thu 4');
+        break;
+    case 5:
+        console.log('hom nay la thu 5');
+        break;
+    case 6:
+        console.log('hom nay la thu 6');
+        break;
+    default:
+        console.log('khong biet')
 }
+
+// 2 trường hợp khii nào sử dụng if-else và switch-case
+// TH1: khi so sánh if-else : <> !==
+// TH2: khi có kết quả cho trước thì dùng switch case (nếu có dưới 3 giá trị thì dùng if else)
