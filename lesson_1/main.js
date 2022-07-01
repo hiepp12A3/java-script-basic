@@ -1,22 +1,15 @@
 /**
- * Toán tử 3 ngôi - Ternary operator
+    Vòng lặp - Loop
+
+    1. for - Lặp với điều kiện đúng
+    2. for/in - lặp vớ key của đối tượng
+    3. for/or - lặp qua value của đối tượng
+    4. while - Lặp khi điều kiện đúng
+    5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
  */
 
-var course = {
-    name: 'Javascript',
-    coin: 250
+
+//  VÒNG LẶP FOR
+for (var i = 1; i <= 10; i++) {
+    console.log(i);
 }
-
-// if (course.coin > 0) {
-//     console.log(`${course.coin} Coins`)
-// } else {
-//     console.log('Mien phi')
-// }
-
-var result = course.coin > 0 ? `${course.coin} Coins` : 'Mien phi';
-console.log(result);
-
-var a = 1;
-var b = 2;
-
-var c = a > 0 ? a : b;
