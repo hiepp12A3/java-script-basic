@@ -10,28 +10,21 @@
 
 
 //  VÒNG LẶP FOR
+
 // for (var i = 1; i <= 10; i++) {
 //     console.log(i);
 // }
 
 /**
     Bài tập trên F8:
-    - Tạo hàm getRandNumbers , có 3 tham só min, max, length.
-    - Hàm trả về số 1 mảng gồm length phần tử.
-    - Các giá trị trong mảng là số ngẫu nhiên, giá trị trong khoảng min tới max.
-    Gợi ý: cách taoh số 1 số ngẫu nhiên trong khoảng min, max
-    Math.random() * (max - min) + min
-    M
-
+    - Viết hàm getTotal trả về tổng giá trị các phần tử của mảng;
  */
 
-const getRandNumbers = (min, max, length) => {
-    const array = []
-    min = 5;
-    max = 16;
-    for (let i = 0; i < length; i++) {
-        array.push(Math.floor(Math.random() * (max - min + 1) + min))
+function getTotal(arr) {
+    let sum = 0;
+    for (i = 0; i < arr.length; i++) {
+        sum += arr[i]
     }
-    return array
+    return sum;
 }
-console.log(getRandNumbers(1, 9, 5))
+console.log(getTotal([3, 5, 6]))
