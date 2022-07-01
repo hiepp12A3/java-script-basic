@@ -1,29 +1,22 @@
 /**
- * Câu lệnh rẽ nhánh - Wsitch
+ * Toán tử 3 ngôi - Ternary operator
  */
 
-var date = 39;
-
-switch (date) {
-    case 2:
-        console.log('hom nay la thu 2');
-        break;
-    case 3:
-        console.log('hom nay la thu 3');
-        break;
-    case 4:
-        console.log('hom nay la thu 4');
-        break;
-    case 5:
-        console.log('hom nay la thu 5');
-        break;
-    case 6:
-        console.log('hom nay la thu 6');
-        break;
-    default:
-        console.log('khong biet')
+var course = {
+    name: 'Javascript',
+    coin: 250
 }
 
-// 2 trường hợp khii nào sử dụng if-else và switch-case
-// TH1: khi so sánh if-else : <> !==
-// TH2: khi có kết quả cho trước thì dùng switch case (nếu có dưới 3 giá trị thì dùng if else)
+// if (course.coin > 0) {
+//     console.log(`${course.coin} Coins`)
+// } else {
+//     console.log('Mien phi')
+// }
+
+var result = course.coin > 0 ? `${course.coin} Coins` : 'Mien phi';
+console.log(result);
+
+var a = 1;
+var b = 2;
+
+var c = a > 0 ? a : b;
