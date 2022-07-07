@@ -9,20 +9,22 @@
  */
 
 
-//  Vòng lặp while loop
+//  Vòng lặp do/do while
 
 /**
     Bài tập trên F8:
   
  */
 
-var myArray = [
-    'js',
-    'php'
-]
 
 var i = 0;
-while (i < myArray.length) {
-    console.log(myArray[i])
+var isSuccess = false;
+
+do {
     i++;
-}
+    console.log('Nạp thẻ lần ' + i);
+    // Thanh cong
+    if (false) {
+        isSuccess = true;
+    }
+} while (!isSuccess && i <= 3);
