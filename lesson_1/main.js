@@ -8,23 +8,18 @@
     5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
  */
 
-
-//  Break và COntinue trong vòng lặp
-// Break là dừng vòng Lặp
-// continue là tiếp tục bỏ qua đoạn code sau đó
-
+// Vòng lặp lồng nhau (Nested loop)
 /**
     Bài tập trên F8:
   
  */
-
-for (var i = 0; i < 10; i++) {
-    // in ra số lẻ
-    if (i % 2 !== 0) {
-        continue;
+var myArray = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
+for (var i = 0; i < myArray.length; i++) {
+    for (var j = 0; j < myArray[i].length; j++) {
+        console.log(myArray[i][j])
     }
-    console.log(i);
-    // if (i == 5) {
-    //     break;
-    // }
 }
