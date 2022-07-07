@@ -9,22 +9,22 @@
  */
 
 
-//  Vòng lặp do/do while
+//  Break và COntinue trong vòng lặp
+// Break là dừng vòng Lặp
+// continue là tiếp tục bỏ qua đoạn code sau đó
 
 /**
     Bài tập trên F8:
   
  */
 
-
-var i = 0;
-var isSuccess = false;
-
-do {
-    i++;
-    console.log('Nạp thẻ lần ' + i);
-    // Thanh cong
-    if (false) {
-        isSuccess = true;
+for (var i = 0; i < 10; i++) {
+    // in ra số lẻ
+    if (i % 2 !== 0) {
+        continue;
     }
-} while (!isSuccess && i <= 3);
+    console.log(i);
+    // if (i == 5) {
+    //     break;
+    // }
+}
