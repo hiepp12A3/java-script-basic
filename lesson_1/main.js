@@ -9,48 +9,20 @@
  */
 
 
-//  FOR / in lopp
+//  Vòng lặp while loop
 
 /**
     Bài tập trên F8:
   
  */
 
-var languages = [
+var myArray = [
     'js',
-    'php',
-    'ruby',
-    'java'
-];
+    'php'
+]
 
-var mystring = 'hiep dep trai';
-
-for (var key in languages) {
-    console.log(mystring[2]);
+var i = 0;
+while (i < myArray.length) {
+    console.log(myArray[i])
+    i++;
 }
-
-function run(object) {
-    var arr = [];
-    for (var key in object) {
-        arr.push(`Thuộc tính ${key} có giá trị ${object[key]}`)
-    }
-    return arr;
-}
-
-// Expected results:
-console.log(
-    run({ name: 'Nguyen Van A', age: 16 }));
-
-// var myInfo = {
-//     name: 'Hiep dep trai',
-//     age: 17,
-//     address: 'Ha noi, VN'
-// }
-
-// for (var key in myInfo) {
-//     // lấy ra biến từ key
-//     console.log(myInfo);
-
-//     // lấy ra giá trị của biến từ key
-//     console.log(myInfo[key])
-// }
