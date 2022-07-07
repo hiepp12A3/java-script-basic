@@ -8,18 +8,21 @@
     5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
  */
 
-// Vòng lặp lồng nhau (Nested loop)
+// Thêm ví dụ về vòng lặp
 /**
     Bài tập trên F8:
-  
  */
-var myArray = [
-    [1, 2],
-    [3, 4],
-    [5, 6]
-];
-for (var i = 0; i < myArray.length; i++) {
-    for (var j = 0; j < myArray[i].length; j++) {
-        console.log(myArray[i][j])
-    }
+
+// in ngược từ 100 về 0
+for (var i = 100; i > 0; i--) {
+    console.log(i)
+}
+console.log('hi');
+// in mỗi lần tăng 5 đơn vị
+for (var i = 0; i <= 100; i += 5) {
+    console.log(i)
+}
+console.log('hi2');
+for (var i = 100; i > 0; i -= 5) {
+    console.log(i)
 }
