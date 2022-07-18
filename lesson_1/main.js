@@ -1,28 +1,68 @@
 /**
-    Vòng lặp - Loop
-
-    1. for - Lặp với điều kiện đúng
-    2. for/in - lặp với key của đối tượng
-    3. for/or - lặp qua value của đối tượng
-    4. while - Lặp khi điều kiện đúng
-    5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
+ * Đệ quy
  */
 
-// Thêm ví dụ về vòng lặp
+// Bài tập
 /**
-    Bài tập trên F8:
- */
+     xóa các phẩn tử trùng lặp trong mảng
+     không dùng các hàm có sẵn trong JS
+    input: arr = ['a', 'b', 'c', 'a', 'a', 'c']
+    output: arr = ['a', 'b', 'c', 'd']
 
-// in ngược từ 100 về 0
-for (var i = 100; i > 0; i--) {
-    console.log(i)
+ */
+// // cách 1 sử dụng Set
+// var array = ['a', 'b', 'c', 'a', 'b', 'c'];
+// console.log([...(new Set(array))]);
+
+
+
+// 1. xác định điểm dừng
+// 2. logic handle => Tạo ra điểm dừng
+
+function countDown(num) {
+    if (num > 0) {
+        console.log(num)
+        return countDown(num - 1);
+    }
+    return num;
 }
-console.log('hi');
-// in mỗi lần tăng 5 đơn vị
-for (var i = 0; i <= 100; i += 5) {
-    console.log(i)
+countDown(3);
+
+console.log("////");
+
+function loop(start, end, cb) {
+    if (start < end) {
+        cb(start);
+        return loop(start + 1, end, cb);
+    }
 }
-console.log('hi2');
-for (var i = 100; i > 0; i -= 5) {
-    console.log(i)
+
+var array = ['js', 'php', 'java'];
+
+loop(0, array.length, function(index) {
+    console.log('index: ', index);
+    console.log(array[index]);
+})
+
+
+console.log("////");
+
+// Giai thừa
+
+// 3*2*1=
+// 6*5*...*1 =
+function giaiThua(num) {
+    // var output = 1;
+    // for (var i = num; i > 0; i--) {
+    //     output = output * i;
+    // }
+    // return output;
+
+    // giải bằng đệ quy
+    if (num > 0) {
+        return num * giaiThua(num - 1);
+    }
+    return 1;
 }
+
+console.log(giaiThua(3));
